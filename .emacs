@@ -66,8 +66,17 @@
 
 (setq js-indent-level 2)
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(package-selected-packages nil))
-(custom-set-faces)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (setq gptel-use-curl t
       gptel-stream nil)
@@ -86,20 +95,6 @@
 (global-set-key "" 'count-words)
 
 (global-set-key (kbd "C-c -") (lambda () (interactive) (insert "—")))
-
-(use-package copilot
-  :ensure t
-  :hook (prog-mode . copilot-mode)
-  :custom
-  (copilot-idle-delay 0.2)
-  (copilot-log-max 1000)
-  :bind
-  (:map copilot-completion-map
-        ("TAB"   . copilot-accept-completion)
-        ("C-TAB" . copilot-accept-completion-by-word)
-        ("M-TAB" . copilot-accept-completion-by-line)
-        ("M-n"   . copilot-next-completion)
-        ("M-p"   . copilot-previous-completion)))
 
 (global-set-key (kbd "C-c f") 'project-find-file)
 (global-set-key (kbd "C-c p") 'project-switch-project)
